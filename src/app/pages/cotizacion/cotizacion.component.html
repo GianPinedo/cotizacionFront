@@ -1,0 +1,79 @@
+<section class="container mt-5">
+  <div class="card shadow">
+    <div class="card-body">
+      <h2 class="card-title text-center mb-4">Simulador de Seguro Vehicular</h2>
+
+      <form (ngSubmit)="cotizar()" [formGroup]="form" novalidate>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label for="marca" class="form-label">Marca</label>
+            <select id="marca" formControlName="marca" class="form-select">
+              <option *ngFor="let m of marcas" [value]="m">{{ m }}</option>
+            </select>
+          </div>
+
+          <div class="col-md-6">
+            <label for="modelo" class="form-label">Modelo</label>
+            <input
+              id="modelo"
+              type="text"
+              formControlName="modelo"
+              class="form-control"
+              placeholder="Ej. Yaris"
+            />
+          </div>
+
+          <div class="col-md-6">
+            <label for="anio" class="form-label">Año del Vehículo</label>
+            <input
+              id="anio"
+              type="number"
+              formControlName="anio"
+              class="form-control"
+              placeholder="Ej. 2020"
+            />
+          </div>
+
+          <div class="col-md-6">
+            <label for="edad" class="form-label">Edad del Conductor</label>
+            <input
+              id="edad"
+              type="number"
+              formControlName="edadConductor"
+              class="form-control"
+              placeholder="Ej. 35"
+            />
+          </div>
+
+          <div class="col-md-6">
+            <label for="uso" class="form-label">Tipo de Uso</label>
+            <select id="uso" formControlName="uso" class="form-select">
+              <option *ngFor="let u of usos" [value]="u">{{ u }}</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="d-grid mt-4">
+          <button type="submit" class="btn btn-primary">
+            Calcular Prima
+          </button>
+        </div>
+      </form>
+
+      <div *ngIf="resultado" class="alert alert-light mt-4 border">
+        <h5 class="mb-3">Resultado:</h5>
+        <ul class="list-unstyled mb-0">
+          <li><strong>Precio Base:</strong> S/ {{ resultado.precioBase }}</li>
+          <li><strong>Ajuste por Año:</strong> S/ {{ resultado.ajusteAnio }}</li>
+          <li><strong>Ajuste por Uso:</strong> S/ {{ resultado.ajusteUso }}</li>
+          <li><strong>Ajuste por Edad:</strong> S/ {{ resultado.ajusteEdad }}</li>
+          <li><strong>Ajuste por Marca:</strong> S/ {{ resultado.ajusteMarca }}</li>
+        </ul>
+        <hr />
+        <p class="fw-bold fs-5 text-success">
+          Prima Total: S/ {{ resultado.primaTotal }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
