@@ -1,60 +1,36 @@
-# CotizadorFrontend
+# 💻 Frontend - Cotizador de Seguros Vehiculares
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.2.
+Este proyecto es la interfaz de usuario del sistema de cotización de seguros vehiculares. Permite simular de forma sencilla y visual el costo del seguro, mostrando los ajustes aplicados según criterios definidos por el backend.
 
-## Development server
+Construido con **Angular**, **Bootstrap** y arquitectura modular.
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+## 📌 Descripción del sistema
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+El frontend permite:
 
-## Code scaffolding
+- Ingresar datos del vehículo y del conductor
+- Obtener la prima total y ver detalles del cálculo
+- Consultar dinámicamente las **marcas** y **tipos de uso** desde el backend
+- Navegar entre secciones (cotización y modelos)
+- Interfaz responsiva, moderna y minimalista
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
 
-```bash
-ng generate component component-name
-```
+## ✅ Requisitos
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- Node.js 18+
+- Angular CLI
+- Navegador moderno (Chrome, Firefox, Edge)
+- Docker (opcional)
 
-```bash
-ng generate --help
-```
+---
 
-## Building
+## ⚙️ Instalación local
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+1. **Clona el repositorio**
 
 ```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-# cotizacionFront
+git clone https://github.com/tu-usuario/cotizador-frontend.git
+cd cotizador-frontend
