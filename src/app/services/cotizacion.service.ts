@@ -3,12 +3,13 @@ import { HttpClient } from '@angular/common/http';
 import { CotizacionRequest } from '../models/cotizacion-request.model';
 import { CotizacionResponse } from '../models/cotizacion-response.model';
 import { Observable } from 'rxjs';
+import { API_BASE_URL } from '../utils/constants';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CotizacionService {
-  private readonly apiUrl = 'http://localhost:8081/api/cotizaciones/cotizar';
+  private readonly apiUrl = `${API_BASE_URL}/cotizaciones/cotizar`;
 
   constructor(private http: HttpClient) {}
 

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { API_BASE_URL } from '../utils/constants';
 
 interface MarcaResponse {
   nombre: string;
@@ -15,7 +16,7 @@ interface UsoResponse {
   providedIn: 'root'
 })
 export class CatalogoService {
-  private readonly baseUrl = 'http://localhost:8081/api';
+  private readonly baseUrl = API_BASE_URL;
 
   constructor(private http: HttpClient) {}
 
