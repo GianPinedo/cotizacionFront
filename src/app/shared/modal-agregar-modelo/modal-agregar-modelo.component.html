@@ -1,0 +1,25 @@
+
+<div class="modal fade" id="addModelModal" tabindex="-1" aria-labelledby="addModelModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addModelModalLabel">Agregar Nuevo Modelo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div *ngIf="mostrarMensajeExito" class="alert alert-success">
+          {{ mensajeExito }}
+        </div>
+        <form (ngSubmit)="agregarModelo()">
+          <div class="mb-3">
+            <label for="nuevoModelo" class="form-label">Nombre del Modelo</label>
+            <input type="text" id="nuevoModelo" [(ngModel)]="nuevoModelo" name="nuevoModelo" class="form-control" required />
+          </div>
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary">Agregar Modelo</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

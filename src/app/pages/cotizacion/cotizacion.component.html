@@ -14,13 +14,12 @@
 
           <div class="col-md-6">
             <label for="modelo" class="form-label">Modelo</label>
-            <input
-              id="modelo"
-              type="text"
-              formControlName="modelo"
-              class="form-control"
-              placeholder="Ej. Yaris"
-            />
+            <div class="d-flex">
+              <select id="modelo" formControlName="modelo" class="form-select">
+                <option *ngFor="let m of modelos" [value]="m.nombre">{{ m.nombre }}</option>
+              </select>
+               <button type="button" class="btn btn-outline-secondary ms-2" (click)="openModal()">+</button>
+            </div>
           </div>
 
           <div class="col-md-6">
@@ -76,4 +75,7 @@
       </div>
     </div>
   </div>
+
+  <!-- Modal to add new model -->
+ <app-modal-agregar-modelo (modeloAgregado)="actualizarListaModelos()"></app-modal-agregar-modelo>
 </section>
