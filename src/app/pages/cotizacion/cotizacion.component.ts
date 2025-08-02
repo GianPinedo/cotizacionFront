@@ -9,6 +9,7 @@ import { ModeloService } from '../../services/modelo.service';
 import { Modelo } from '../../models/modelo.model';  
 import { ModalAgregarModeloComponent } from '../../shared/modal-agregar-modelo/modal-agregar-modelo.component';
 
+//componente para la cotización de seguros de autos
 @Component({
   selector: 'app-cotizacion',
   standalone: true,
